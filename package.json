@@ -1,4 +1,29 @@
 {
   "name": "timesights",
-  "packageManager": "yarn@4.9.1"
+  "packageManager": "yarn@4.9.3",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "yarn clean && node esbuild.config.js",
+    "dev": "concurrently \"yarn build --watch\" \"npx http-server . -c-1\""
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "@types/esbuild-copy-static-files": "^0",
+    "@web/test-runner": "^0.20.2",
+    "@web/test-runner-playwright": "^0.11.1",
+    "autoprefixer": "^10.4.21",
+    "chai": "^6.0.1",
+    "concurrently": "^9.2.1",
+    "esbuild": "^0.25.9",
+    "esbuild-copy-static-files": "^0.1.0",
+    "postcss": "^8.5.6",
+    "rimraf": "^6.0.1",
+    "sinon": "^21.0.0",
+    "tailwindcss": "^4.1.12",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "lit": "^3.3.1"
+  }
 }

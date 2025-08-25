@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About</title>
+    <link rel="stylesheet" href="../style.css" />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "lit": "/node_modules/lit/index.js",
+          "about": "./bundle.js",
+          "@/": "/src/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <about-page></about-page>
+
+    <script type="module">
+      import "about";
+    </script>
+  </body>
+</html>
