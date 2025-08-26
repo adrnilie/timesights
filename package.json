@@ -1,11 +1,16 @@
 {
   "name": "timesights",
-  "packageManager": "yarn@4.9.3",
   "type": "module",
+  "license": "UNLICENSED",
   "scripts": {
     "clean": "rimraf dist",
     "build": "yarn clean && node esbuild.config.js",
     "dev": "concurrently \"yarn build --watch\" \"npx http-server . -c-1\""
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "yarn": ">=1.22.22",
+    "npm": "please use yarn"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.12",
